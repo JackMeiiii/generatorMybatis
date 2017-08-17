@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE generatorConfiguration  
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"  
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">  
+<generatorConfiguration>  
+ 
+    <classPathEntry  location="D:\work\workspsce201758\AutoMybatisData\src\mysql-connector-java-5.1.30.jar"/>  
+    <context id="DB2Tables"  targetRuntime="MyBatis3">  
+   			<property name="mergeable" value="false"/>
+        <commentGenerator>  
+            <property name="suppressDate" value="true"/>  
+            <property name="suppressAllComments" value="true"/>  
+        </commentGenerator>  
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://106.14.45.188:33006/coaches" userId="root" password="tetsadmindongdaoshuju123321">  
+        </jdbcConnection>  
+        <javaTypeResolver>  
+            <property name="forceBigDecimals" value="false"/>  
+        </javaTypeResolver>  
+		<!-- 实体 -->
+        <javaModelGenerator targetPackage="com.dongdao.xueche.business.model" targetProject="D:\work\workspsce201758\AutoMybatisData\src">  
+            <property name="enableSubPackages" value="true"/>  
+            <property name="trimStrings" value="true"/>  
+        </javaModelGenerator>  
+        <!-- map -->
+        <sqlMapGenerator targetPackage="com.dongdao.xueche.business.website" targetProject="D:\work\workspsce201758\AutoMybatisData\src">  
+       		<property name="useActualColumnNames" value="true" />
+            <property name="enableSubPackages" value="true"/>  
+        </sqlMapGenerator>  
+         <!-- dao -->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.dongdao.xueche.business.website.dao" targetProject="D:\work\workspsce201758\AutoMybatisData\src">  
+            <property name="enableSubPackages" value="true"/>  
+        </javaClientGenerator>  
+         
+<!--         <table tableName="web_class_type_detail" domainObjectName="WebClassTypeDetail" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table> -->
+<!--         <table tableName="web_class_type_spec" domainObjectName="WebClassTypeSpec" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table> -->
+   <!--      <table tableName="web_class_type_spec_mapping" domainObjectName="webClassTypeSpecMapping" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+        <table tableName="web_banner" domainObjectName="WebBanner" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+        <table tableName="web_code" domainObjectName="WebCode" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+        <table tableName="web_content" domainObjectName="WebContent" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+        <table tableName="web_class_type_spec_mapping" domainObjectName="WebClassTypeSpecMapping" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+	        <property name="useActualColumnNames" value="true"/>
+        </table>
+ -->    
+        <table tableName="web_class_type_spec" domainObjectName="WebClassTypeSpec" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false">
+	        <property name="useActualColumnNames" value="true"/>
+        </table>
+ </context>  
+</generatorConfiguration>  
